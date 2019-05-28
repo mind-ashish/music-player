@@ -1,0 +1,109 @@
+:root{
+	--body-color:#0b1027; 
+	/*css variable*/
+}
+body{
+	margin:0px;
+	background-color: var(--body-color);
+}
+/*Header*/
+header{
+	height:10vh;
+	width: 100vw;
+	position: fixed;
+	top: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+.logo{
+	height:12vh;
+	width: 15%;
+	min-width: 150px;
+	margin-left: 3%;
+}
+.logo img{
+	height: 100%;
+	width: 100%;
+}
+.header-title{
+	height: 100%;
+	width: 40vw;
+	color:white;
+}
+.header-title h3{
+	font-size: 1.5rem;
+	margin-left: 30%;
+}
+.search-bar{
+	height:10vh;
+	width:25vw;
+	color: white;
+	position: relative;
+}
+#search{
+	font-size: 1.7rem;
+	width: 95%;
+	position: absolute;
+	top: 40%;
+	left: 0px;
+}
+.notifications{
+	height: 10vh;
+	width: 5vw;
+	min-width: 5vw;
+	color:white;
+	font-size: 2rem;
+	position: relative;
+	
+}
+.notifications a{
+	text-decoration: none;
+	color: white;
+	position:absolute;
+	top: 35%;
+	left: 0px;
+
+}
+
+
+#user-profile{
+	height:50px;
+	width: 50px;
+	min-width: 50px;
+	min-height: 50px;
+	margin-top: 20%;
+	margin-left: 10%;
+	background-image: url("../static/user.jpg");
+	background-position: center;
+	background-size: cover;
+	border: 1px white;
+	border-radius: 50%;
+}
+
+@media screen and (max-width: 600px){
+body{
+		font-size: 20px;
+}
+.header-title{
+	height: 100%;
+	width: 25vw;
+	color:white;
+}
+
+.header-title h3{
+	font-size: 1.5rem;
+	margin-left: 0%;
+}
+
+#user-profile{
+	margin-top: 20%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+}
+
+
+
+
+
