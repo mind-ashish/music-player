@@ -101,7 +101,7 @@ header{
 #main{
 	margin-top: 12vh;
 	height: 100vh;
-	width: 68vw;
+	width: 75vw;
 	/*background-color: #eee;*/
 	padding: 40px;   
 }
@@ -222,52 +222,113 @@ color: white;
 }
 .latest-release-icons{
 	height: 200px;
-	width: 370px;
-	background-color: white;
-	margin-bottom: 20px;
+	width: 380px;
+	/*background-color: white;
+*/	margin-bottom: 20px;
 
+}
+.latest-release-icons img{
+	height: 100%;
+	width: 60%;
+	border-radius: 3%;
+
+}
+.latest-release-icons p{
+	display: inline-block;
+	vertical-align: top;
+	color: white;
+	margin-left: 30px;	
 }
 
 /*Popular artists*/
 .pop {
-	height: 110px;
-	width: 110px;
-	border: 1px solid lightgrey;
-	border-radius: 50%;
-	background-color: white;
+	height: 120px;
+	width: 120px;
 	margin-bottom: 20px;
-	box-shadow: 0px 2px 2px 4px rgba(255,255,255,0.3);
+}
+.pop img{
+	height: 100%;
+	width:100%;
+	border: 0px solid lightgrey;
+	border-radius: 50%;
+	box-shadow: 0px 2px 2px 2px rgba(169,169,169,0.3);
+
 }
 
 /*Stations*/
+#stations{
+	background-color:#101642;
+}
 
 #stations-logo{
-	height: 100px;
+	height: 120px;
 	width: 100px;
-	background-color: white;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 30px;
 
+}
+#stations-logo img{
+	height: 100%;
+	width: 100%;
 }
 
 .station-type{
-	height: 70px;
-	width: 70px;
-	border: 0.5px solid black;
+	height: 110px;
+	width: 110px;
+	margin-top:20px;
+	border: 0px solid lightgrey;
 	border-radius: 50%;
-	background-color: white;
-	margin-bottom: 20px;
+	box-shadow: 0px 2px 2px 2px rgba(169,169,169,0.3);
+
+	position: relative;
+	overflow: hidden;
+
+}
+.station-type img{
+	height: 100%;
+	width:100%;
+	border: 0px solid lightgrey;
+	border-radius: 50%;
+	transition: transform .2s;
+
+
+}
+/*zoom transition*/
+.station-type img:hover{
+	transform: scale(1.5);
+}
+.station-caption{
+	position: absolute;
+	top:50px;
+	color:white;
+	left:15%;
+	font-size: 1.3rem;
+	font-weight: 600;
+
 }
 
 /*Genre*/
 .genre-type{
 	height: 150px;
 	width: 240px;
-	background-color: white;
 	margin-bottom: 20px;
 	box-shadow: 0px 2px 7px 4px rgba(255,255,255,0.3);
+	overflow: hidden;
+	/*so that if image overflow on zoom transition then hidden*/
+}
 
+.genre-type img{
+	height: 100%;
+	width: 100%;
+	transition: transform .2s;
 
 }
+/*zoom transition*/
+
+.genre-type img:hover{
+transform: scale(1.3);
+}
+
 
 /*Latest english, latest hindi*/
 
@@ -277,9 +338,8 @@ color: white;
 	background-color: white;
 	margin-bottom: 20px;
 	box-shadow: 0px 2px 7px 4px rgba(255,255,255,0.3);
-
-
 }
+
 
 
 
