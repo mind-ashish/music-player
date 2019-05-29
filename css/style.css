@@ -5,6 +5,7 @@
 body{
 	margin:0px;
 	background-color: var(--body-color);
+	position: relative;
 }
 /*Header*/
 header{
@@ -97,6 +98,8 @@ header{
 	}
 }
 
+
+
 /*Main section*/
 #main{
 	margin-top: 12vh;
@@ -104,7 +107,6 @@ header{
 	width: 70vw;
 	/*background-color: #eee;*/
 	padding: 40px;   
-	display: inline-block;
 }
 @media screen and (max-width:720px){
 	#main{
@@ -354,25 +356,31 @@ transform: scale(1.3);
 /*Playlist queue */
 
 #queue{
-	vertical-align: top;
-	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 0;
 	height: auto;
-	width: 30vw;
-	background-color: green;
+	width:28vw;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
+/*playlist is not included for smaller devices*/
+@media screen and (max-width: 720px){
+	#queue{
+		display: none;
+	}
+}
 #queue-title{
 	width: 100%;
-	text-align: center;
 	color: white;
 	margin-bottom: 20px;
 }
-.song-name{
+.song-holder{
 	height: 100px;
 	width: 100%;
 	margin-top: 20px;
+	background-color: var(--body-color);	
 }
 .serial{
 	margin-top: 8%;
@@ -381,7 +389,7 @@ transform: scale(1.3);
 	font-size: 1rem;
 	display: inline-block;
 }
-.song-name img{
+.song-holder img{
 display: inline-block;
 vertical-align: top;
 height: 95%;
