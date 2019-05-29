@@ -97,8 +97,8 @@ header{
 #main{
 	height: 100vh;
 	width: 68vw;
-	background-color: #eee;
-	padding: 40px;   
+	/*background-color: #eee;
+*/	padding: 40px;   
 }
 
 /*Carousel*/
@@ -108,7 +108,7 @@ header{
 }
 
 #slider {
-  height: 35vw;
+  height: 30vw;
   position: relative;
   /*container div is relative so that slides s1,s2.. are absolute*/
   perspective: 1000px; 
@@ -163,16 +163,29 @@ header{
 }
 
 #slide1 {
- background-image: url("a.png");
+ background-image: url("../static/0.jpg");
  background-size: 100% 100%;
  /*this make the background image height and width as 100% of parent div. So auto scale to fit exactly*/
 }
 #slide2 { 
-  background: #4CAF50 
+	background-image: url("../static/2.jpg");
+ background-size: 100% 100%;
+
+ }
+#slide3 { 
+background-image: url("../static/1.jpg");
+ background-size: 100% 100%;
+ }
+#slide4 { 
+background-image: url("../static/6.jpg");
+ background-size: 100% 100%;
+
 }
-#slide3 { background: #CDDC39 }
-#slide4 { background: #FFC107 }
-#slide5 { background: #FF5722 }
+#slide5 { 
+background-image: url("../static/4.jpg");
+ background-size: 100% 100%;
+
+ }
 
 
 
