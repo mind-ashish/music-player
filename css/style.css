@@ -10,9 +10,13 @@ body{
 header{
 	height:12vh;
 	width: 100vw;
-	position: sticky;
+	position: fixed;
 	top: 0px;
 	display: flex;
+	z-index: 1000;
+	background-color: var(--body-color);
+   /*since carousel has some z-index value , it floats over the header, even though header is fixed at its place
+   so adding some z index to header*/
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
@@ -95,10 +99,16 @@ header{
 
 /*Main section*/
 #main{
+	margin-top: 12vh;
 	height: 100vh;
 	width: 68vw;
-	/*background-color: #eee;
-*/	padding: 40px;   
+	/*background-color: #eee;*/
+	padding: 40px;   
+}
+@media screen and (max-width:720px){
+	#main{
+		width: 90vw;
+	}
 }
 
 /*Carousel*/
@@ -130,35 +140,37 @@ header{
 #s1:checked ~ #slide4, #s2:checked ~ #slide5,
 #s3:checked ~ #slide1, #s4:checked ~ #slide2,
 #s5:checked ~ #slide3 {
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+	    /*h-offset, voff set, spread,
+blur , color in rgba 255o255g255ve opacity as well;*/
+  box-shadow: 0 1px 4px 0 rgba(255,255,255,.37);
   transform: translate3d(-30%,0,-200px);
 }
 
 #s1:checked ~ #slide5, #s2:checked ~ #slide1,
 #s3:checked ~ #slide2, #s4:checked ~ #slide3,
 #s5:checked ~ #slide4 {
-  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  box-shadow: 0 6px 10px 0 rgba(255,255,255,.3), 0 2px 2px 0 rgba(255,255,255,.2);
   transform: translate3d(-15%,0,-100px);
 }
 
 #s1:checked ~ #slide1, #s2:checked ~ #slide2,
 #s3:checked ~ #slide3, #s4:checked ~ #slide4,
 #s5:checked ~ #slide5 {
-  box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+  box-shadow:0 5px 35px 3px rgba(255,255,255,.3), 2px 5px 7px 5px; 
   transform: translate3d(0,0,0);
 }
 
 #s1:checked ~ #slide2, #s2:checked ~ #slide3,
 #s3:checked ~ #slide4, #s4:checked ~ #slide5,
 #s5:checked ~ #slide1 {
-  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  box-shadow: 0 6px 10px 0 rgba(255,255,255,.3), 0 2px 2px 0 rgba(255,255,255,.2);
   transform: translate3d(15%,0,-100px);
 }
 
 #s1:checked ~ #slide3, #s2:checked ~ #slide4,
 #s3:checked ~ #slide5, #s4:checked ~ #slide1,
 #s5:checked ~ #slide2 {
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  box-shadow: 0 1px 4px 0 rgba(255,255,255,.37);
   transform: translate3d(30%,0,-200px);
 }
 
@@ -186,6 +198,88 @@ background-image: url("../static/4.jpg");
  background-size: 100% 100%;
 
  }
+
+/*Latest release*/
+#Latest-release, #Popular-artists, #stations, #genre, #hindi, #english{
+	height: auto;
+	width: 80%;
+	/*width is 80% of main section*/
+	/*background-color:green;
+*/	margin: 5% auto ;
+	/*to align in centre of main*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 10px;
+}
+#latest-release-title, #pop-title,#eng-title , #hin-title{
+width:100%;
+height: auto;
+margin-bottom: 10px;
+color: white;
+
+}
+.latest-release-icons{
+	height: 200px;
+	width: 370px;
+	background-color: white;
+	margin-bottom: 20px;
+
+}
+
+/*Popular artists*/
+.pop {
+	height: 110px;
+	width: 110px;
+	border: 1px solid lightgrey;
+	border-radius: 50%;
+	background-color: white;
+	margin-bottom: 20px;
+	box-shadow: 0px 2px 2px 4px rgba(255,255,255,0.3);
+}
+
+/*Stations*/
+
+#stations-logo{
+	height: 100px;
+	width: 100px;
+	background-color: white;
+	margin-bottom: 20px;
+
+}
+
+.station-type{
+	height: 70px;
+	width: 70px;
+	border: 0.5px solid black;
+	border-radius: 50%;
+	background-color: white;
+	margin-bottom: 20px;
+}
+
+/*Genre*/
+.genre-type{
+	height: 150px;
+	width: 240px;
+	background-color: white;
+	margin-bottom: 20px;
+	box-shadow: 0px 2px 7px 4px rgba(255,255,255,0.3);
+
+
+}
+
+/*Latest english, latest hindi*/
+
+.hin, .eng{
+	height: 180px;
+	width: 100px;
+	background-color: white;
+	margin-bottom: 20px;
+	box-shadow: 0px 2px 7px 4px rgba(255,255,255,0.3);
+
+
+}
 
 
 
