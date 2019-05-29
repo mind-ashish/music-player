@@ -10,7 +10,7 @@ body{
 header{
 	height:12vh;
 	width: 100vw;
-	position: fixed;
+	position: sticky;
 	top: 0px;
 	display: flex;
 	flex-direction: row;
@@ -19,7 +19,7 @@ header{
 .logo{
 	height:12vh;
 	width: 15%;
-	min-width: 150px;
+	min-width: 100px;
 	margin-left: 3%;
 }
 .logo img{
@@ -29,11 +29,11 @@ header{
 .header-title{
 	height: 100%;
 	width: 40vw;
-	color:white;
+	vertical-align: middle;
 }
-.header-title h3{
-	font-size: 1.5rem;
-	margin-left: 30%;
+#title-text {
+	color: white;
+	font-size: 1.3rem;
 }
 .search-bar{
 	height:10vh;
@@ -43,17 +43,18 @@ header{
 }
 #search{
 	font-size: 1.7rem;
-	width: 95%;
+	width: 90%;
 	position: absolute;
 	top: 40%;
 	left: 0px;
 }
+
 .notifications{
 	height: 10vh;
 	width: 5vw;
 	min-width: 5vw;
 	color:white;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	position: relative;
 	
 }
@@ -66,13 +67,18 @@ header{
 
 }
 
+#user-profile-section{
+	height: 100%;
+	width: auto;
+	text-align: center;
+}
 
 #user-profile{
 	height:50px;
 	width: 50px;
 	min-width: 50px;
 	min-height: 50px;
-	margin-top: 20%;
+	margin-top: 30%;
 	margin-left: 10%;
 	background-image: url("../static/user.jpg");
 	background-position: center;
@@ -81,27 +87,92 @@ header{
 	border-radius: 50%;
 }
 
-@media screen and (max-width: 800px){
-body{
-	font-size: 20px;
-}
-.header-title{
-	height: 100%;
-	width: 25vw;
-	color:white;
+@media screen and (max-width: 400px){
+	.search-bar{
+		display: none;
+	}
 }
 
-.header-title h3{
-	font-size: 1.5rem;
-	margin-left: 0%;
+/*Main section*/
+#main{
+	height: 100vh;
+	width: 68vw;
+	background-color: #eee;
+	padding: 40px;   
 }
 
-#user-profile{
-	margin-top: 20%;
-	margin-left: 10%;
-	margin-right: 10%;
+/*Carousel*/
+[type=radio] {
+  display: none;
+  /*to hide the radio buttons*/
 }
+
+#slider {
+  height: 35vw;
+  position: relative;
+  /*container div is relative so that slides s1,s2.. are absolute*/
+  perspective: 1000px; 
+  /*to give perspective to active frame/slide*/
+  transform-style: preserve-3d;
 }
+
+#slider label {
+  margin: auto;
+  width: 60%;
+  height: 100%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0; right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(-30%,0,-200px);
+}
+
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(-15%,0,-100px);
+}
+
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+  box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+  transform: translate3d(0,0,0);
+}
+
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(15%,0,-100px);
+}
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(30%,0,-200px);
+}
+
+#slide1 {
+ background-image: url("a.png");
+ background-size: 100% 100%;
+ /*this make the background image height and width as 100% of parent div. So auto scale to fit exactly*/
+}
+#slide2 { 
+  background: #4CAF50 
+}
+#slide3 { background: #CDDC39 }
+#slide4 { background: #FFC107 }
+#slide5 { background: #FF5722 }
 
 
 
