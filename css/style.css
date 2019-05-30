@@ -378,10 +378,16 @@ transform: scale(1.3);
 		display: none;
 	}
 }
+#queue-title{
+	width: 100%;
+	color: white;
+	margin-bottom: 20px;
+}
 .queue-title{
 	width: 100%;
 	color: white;
 	margin-bottom: 20px;
+
 }
 .song-holder{
 	height: 100px;
