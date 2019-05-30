@@ -560,7 +560,17 @@ width: 40%;
 height: 100%;
 width: 50%;
 }
-
 } 
+
+/*audio controls*/
+audio{
+	margin-top: 4px;
+	width: 90%;
+	background-color: var(--mcolor);
+
+}
+audio:focus{
+	outline: none;
+}
 
 
