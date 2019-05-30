@@ -7,6 +7,10 @@ body{
 	background-color: var(--body-color);
 	position: relative;
 }
+
+
+/*........................................................................................*/
+
 /*Header*/
 header{
 	height:12vh;
@@ -99,6 +103,8 @@ header{
 }
 
 
+
+/*........................................................................................*/
 
 /*Main section*/
 #main{
@@ -351,7 +357,7 @@ transform: scale(1.3);
 	color: white;
 	text-align: center;
 }
-
+/*........................................................................................*/
 
 /*Playlist queue */
 
@@ -371,7 +377,7 @@ transform: scale(1.3);
 		display: none;
 	}
 }
-#queue-title{
+.queue-title{
 	width: 100%;
 	color: white;
 	margin-bottom: 20px;
@@ -406,8 +412,84 @@ margin-right: 20px;
 	vertical-align: top;
 }
 
+/*........................................................................................*/
+/*Playlist section*/
+
+/*Similar artists*/
+.similar-artists{
+	height: 130px;
+	width: 100%;
+	margin-top: 20px;
+	background-color: var(--body-color);
+}
+.similar-artists img{
+height: 95%;
+width: 30%;
+border:1px;
+border-radius: 3%;
+margin-right: 20px;
+}
+.artist-name{
+	margin-top: 8%;
+	color: white;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#about{
+	height: 30vw;
+	width: 80%;
+	/*width is 80% of main section*/
+	/*background-color:green;
+*/	margin: 5% auto ;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+#about img{
+	height: 90%;
+width: 50%;
+border:1px;
+border-radius: 3%;
+margin-right: 20px;
+box-shadow: 0px 2px 7px 4px rgba(255,255,255,0.3);
+}
+.intro-text{
+	color: white;
+	height: 90%;
+	width: 45%;
+}
+#playlist{
+	height: auto;
+	width: 80%;
+	margin: 5% auto ;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.play-holder{
+	height: 70px;
+	width: 100%;
+	margin-top: 13px;
+	background-color: var(--body-color);
+	box-shadow: 0px 2px 7px 4px rgba(255,255,255,0.3);
 
 
+}
+.play-holder img{
+height: 95%;
+width: 15%;
+border:1px;
+border-radius: 3%;
+margin-right: 20px;
+}
+
+ .play-song{
+	color: white;
+	display: inline-block;
+	vertical-align: top;
+
+}
 
 
 
