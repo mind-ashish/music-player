@@ -4,6 +4,7 @@
 }
 body{
 	margin:0px;
+	background-color: #0b1027; /*internet explorer*/
 	background-color: var(--body-color);
 	position: relative;
 }
@@ -503,5 +504,64 @@ margin-right: 20px;
 
 }
 
+
+/*Music player*/
+
+footer{
+	/*--mcolor:#292929de;*/ 
+	--mcolor:#292929e6;
+}
+#music-player{
+	position: fixed;
+	bottom: 0;
+	height: 9vh;
+	width: 100vw;
+	background-color: #292929e6;
+	/*for internet explorer*/
+	background-color: var(--mcolor);
+	/*for other browsers*/
+	display: flex;
+}
+#song-details{
+	height: 100%;
+	width: 40%;
+	/*background-color: white;
+*/}
+#music-player img{
+	margin-left: 20%;
+	margin-right: 20px;
+	width: 30%;
+	height: 100%;
+}
+.song-about{
+	margin-top: 4%;
+	color: white;
+	font-family: sans-serif;
+	font-weight: 300;
+	font-size: 1.2rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+#audio-controls{
+	display: inline-block;
+height: 100%;
+width: 40%;
+background-color: green;
+}
+@media screen and (max-width:500px){
+	#song-details{
+	height: 100%;
+	width: 25%;
+	background-color: white;
+}
+
+#audio-controls{
+height: 100%;
+width: 50%;
+}
+
+} 
 
 
